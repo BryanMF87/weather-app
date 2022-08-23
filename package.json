@@ -1,0 +1,23 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryanMF87/weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BryanMF87/weather-app/issues"
+  },
+  "homepage": "https://bryanmf87.github.io/weather-app",
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
