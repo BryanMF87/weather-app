@@ -7,33 +7,35 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
-.weatherimg {
-    background-image: url('https://images.unsplash.com/photo-1558486012-817176f84c6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=670&q=80');
+body {
     background-size: cover;
-    width: 100%;
-    height: 100%;
     box-sizing: border-box;
-    padding-top: 50px;
+    display: flex;
+    align-items: center;
 }
 
 #content {
+    align-items: center;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
     display: grid;
     grid-template-rows: auto auto auto;
     text-align: center;
+    max-height: 600px;
     max-width: 700px;
     margin: 0 auto;
 }
 
 nav {
     font-weight: bold;
+    color: #1c1c1c;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px 10px 0 0;
-    padding: 13px 0 10px 0;
+    padding: 1rem;
     display: flex;
+    column-gap: 20px;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
@@ -44,7 +46,7 @@ nav span.logoicon {
     font-weight: bold;
     padding: 6px 7.5px;
     color: #fff;
-    background: #000;
+    background: #1c1c1c;
     border-radius: 5px;
 }
 
@@ -77,7 +79,7 @@ nav #search:hover, #search:focus {
   }
 
 
-nav #unitselector div {
+nav #scale-selector button {
     padding: 7px 10px;
     border: 1px solid #000;
     border-radius: 5px;
@@ -85,20 +87,25 @@ nav #unitselector div {
     display: inline-block;
 }
 
-nav #unitselector div:hover {
+nav #scale-selector button:hover {
     background: #000;
     color: #fff;
 }
 
-#weatherdisplay {
-    color: #fff;
-    margin: 0 auto;
-    padding: 75px 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.25);
+nav #scale-selector button:active, nav #scale-selector button:focus {
+    background: pink;
 }
 
-.conditionsicon {
-    padding-bottom: 50px;
+#weatherdisplay {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    padding: 75px 0;
+    text-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+}
+
+.cityicon {
+    filter: drop-shadow(2px 4px 5px rgba(0,0,0,0.3));
 }
 
 #cityname {
@@ -116,7 +123,7 @@ nav #unitselector div:hover {
 #citytemp {
     font-size: 150px;
     font-weight: 700;
-    margin-left: 30px;
+    margin-left: 25px;
 }
 
 #citytemp sup {
@@ -138,7 +145,7 @@ main #temprange > * {
 
 footer {
     background: rgba(255, 255, 255, 0.8);
-    color: #7f7f7f;
+    color: #1c1c1c;
     border-radius: 0 0 10px 10px;
     font-size: 14px;
     width: 100%;
