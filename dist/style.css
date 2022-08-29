@@ -7,16 +7,18 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
-html {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: background-image 3s;
-}
-
 body {
     box-sizing: border-box;
     display: flex;
+    transition: background-image 1s ease all;
+    -moz-transition: background-image 1s ease all;
+    -o-transition: background-image 1s ease all;
+    -webkit-transition: background-image 1s ease all;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
     align-items: center;
 }
 
@@ -70,36 +72,18 @@ nav #search {
     padding: 2px 23px 2px 30px;
     outline: 0;
     background-color: #f5f5f5;
-  }
+}
   
 nav .search-icon {
     position: absolute;
     top: 8px;
     left: 8px;
     width: 14px;
-  }
+}
   
 nav #search:hover, #search:focus {
     border: 1px solid #bcbcbc;
     background-color: white;
-  }
-
-
-nav #scale-selector button {
-    padding: 7px 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    align-items: center;
-    display: inline-block;
-}
-
-nav #scale-selector button:hover {
-    background: #000;
-    color: #fff;
-}
-
-nav #scale-selector button:active, nav #scale-selector button:focus {
-    background: pink;
 }
 
 #weatherdisplay {
@@ -127,7 +111,7 @@ nav #scale-selector button:active, nav #scale-selector button:focus {
 }
 
 #citytemp {
-    font-size: 150px;
+    font-size: 90px;
     font-weight: 700;
     margin-left: 25px;
 }
@@ -157,4 +141,10 @@ footer {
     width: 100%;
     text-align: center;
     bottom: 0;
+}
+
+@media screen and (max-width: 400px) {
+    .optional {
+        display: none;
+    }
 }

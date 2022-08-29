@@ -19,5 +19,6 @@
   "homepage": "https://bryanmf87.github.io/weather-app",
   "dependencies": {
     "gh-pages": "^4.0.0"
-  }
+  },
+  "liveServer.settings.ignoreFiles":["**"]
 }
