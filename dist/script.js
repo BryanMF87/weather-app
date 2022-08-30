@@ -20,18 +20,17 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=london&appid=${weatherA
 
     })
 .catch(() => {
-    console.log('Could not find weather for that location. Please try again.')
+    alert('Could not find weather for that location. Please try again.')
 });
 
 searchInput.addEventListener('keydown', event => {
     if (event.keyCode === 13) {
-        event.preventDefault();
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${weatherAPI}&units=imperial`, {mode: 'cors'})
             .then(response => response.json())
             .then(data => {
                 const { main, name, sys, weather } = data;
                 const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`;
-                
+            
                 const markup = 
                     `<div id="cityname">${name}, ${sys.country}</div>
                     <div id="citytemp">${Math.round(main.temp)}<sup>°F</sup></div>
