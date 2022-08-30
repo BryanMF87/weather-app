@@ -10,11 +10,6 @@ html, body {
 body {
     box-sizing: border-box;
     display: flex;
-    transition: background-image 1s ease all;
-    -moz-transition: background-image 1s ease all;
-    -o-transition: background-image 1s ease all;
-    -webkit-transition: background-image 1s ease all;
-    background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
