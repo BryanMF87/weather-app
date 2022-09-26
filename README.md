@@ -1,4 +1,4 @@
-# weatherapp
+# Weather App
 
 ## Project Description
 I created this real-time weather forecast app using weather API data, fetch commands, and asynchronous Javascript.
